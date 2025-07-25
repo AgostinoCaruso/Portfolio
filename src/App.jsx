@@ -9,13 +9,13 @@ import Skills from './components/Skills'
 function App() {
 
   return (
-    <>
-      <Home />
+    <main>
       <NavBar />
+      <Home />
       <Projects />
       <Skills />
       <Contacts />
-    </>
+    </main>
   )
 }
 
