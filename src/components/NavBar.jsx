@@ -1,7 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import logo from '../assets/download.png';
+import { GlobalContext } from '../context/GlobalContext';
 
 const NavBar = () => {
+
+  const { language, changeLanguage, translation } = useContext(GlobalContext);
+
+  const handleChange = (e) => {
+    changeLanguage(e.target.value);
+  }
+
   const [activeTab, setActiveTab] = useState('home');
   const listNav = ['home', 'skills', 'projects', 'contacts'];
 
@@ -34,7 +42,12 @@ const NavBar = () => {
   return (
     <header>
       <div className="logo">
-        <img src={logo} alt="logo" />
+        <select value={language} onChange={handleChange} 
+        style={{border:"none",outline: "none",
+  background: "transparent", backgroundColor:"#010824"}}>
+          <option value="en">English</option>
+          <option value="it">Italiano</option>
+        </select>
       </div>
       <nav>
         {listNav.map((item) => (

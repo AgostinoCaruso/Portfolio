@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 :root {
@@ -24,7 +24,8 @@
 }
 
 body {
-  margin: 0;
+  /* width: min(1300px, 100%);
+  margin: 0 auto; */
   font-family: Poppins;
   background-color: var(--background);
   color: var(--text-main);
@@ -46,10 +47,11 @@ body {
   }
 }
 
+
 main {
   width: min(1300px, 100%);
-  margin: auto;
-  
+  margin: 0 auto;
+  padding: 0 150px;/*O metto bootstrap o devo tenere questo padding*/
 }
 
 header {
@@ -76,20 +78,25 @@ header {
     display: flex;
     gap: 30px;
 
+
     & span {
       cursor: pointer;
 
       &.active {
         color: var(--lime);
         text-shadow: 0 0 5px;
+        text-decoration: underline;
+      }
+
+      &:hover {
+        text-decoration: underline;
+        color: var(--lime-hover);
       }
     }
   }
 }
 
 section {
-  width: min(1300px, 100%);
-  margin: auto;
   padding: 50px;
   box-sizing: border-box;
 
@@ -140,6 +147,11 @@ section {
         margin-top: 30px;
         display: block;
         width: max-content;
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--lime);
+        }
       }
     }
 
@@ -156,7 +168,7 @@ section {
 
         &:hover {
           box-shadow: 0 100px 100px var(--lime-hover);
-          transform: scale(1.02);
+          transform: scale(1.01);
         }
 
         & img {
@@ -178,6 +190,21 @@ section {
 
           & div:nth-child(-n +3) {
             font-weight: bold;
+          }
+
+          & .link {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            & a {
+              text-decoration: none;
+              color: var(--background);
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
           }
         }
       }
@@ -240,7 +267,8 @@ section {
           width: 35px;
           height: 35px;
         }
-        & .des{
+
+        & .des {
           text-align: left;
           width: 100%;
           font-size: small;
