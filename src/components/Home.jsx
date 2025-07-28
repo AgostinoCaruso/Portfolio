@@ -17,7 +17,7 @@ const Home = () => {
           <div className="des">
             {translation[language].home.des}
           </div>
-          <a href="/agostinocarusocv.pdf" target='_blank'>Download my CV</a>
+          <a href="/Agostino.Caruso.pdf" target='_blank'>Download my CV</a>
         </div>
         <div className="avatar">
           <div className="card">
@@ -30,7 +30,7 @@ const Home = () => {
 
                   <a href="https://github.com/agostinocaruso" target='_blank'><FontAwesomeIcon icon={faGithub} />GitHUB</a>
 
-                  <a href="*" target='_blank'><FontAwesomeIcon icon={faLinkedin} />Linkedin</a>
+                  <a href="https://www.linkedin.com/in/agostino-caruso-154811377/" target='_blank'><FontAwesomeIcon icon={faLinkedin} />Linkedin</a>
                 </div>
               </div>
               <div>CSS HTML JS REACT JAVA SPRING</div>
