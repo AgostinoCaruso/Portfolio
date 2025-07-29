@@ -414,7 +414,7 @@ section {
 
 .hamburger .bar {
   height: 3px;
-  background-color: var(--text-main);
+  background-color: #eee;
   border-radius: 2px;
   transition: all 0.3s ease;
 }
