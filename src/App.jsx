@@ -10,13 +10,13 @@ import 'aos/dist/aos.css';
 
 function App() {
 
-  useEffect(() => {
-    AOS.init({
-      duration: 800,
-      once: false,
-      offset:200,
-    });
-  }, []);
+useEffect(() => {
+  AOS.init({
+    once: true,
+    offset: 80,
+    disable: window.innerWidth < 768 // disabilita su mobile
+  });
+}, []);
 
   return (
     <main className='container'>

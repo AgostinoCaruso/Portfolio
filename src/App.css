@@ -22,11 +22,14 @@
   --name-text-1: rgba(90, 255, 133, 0.8);
   --name-text-2: rgba(0, 255, 255, 0.5);
 }
+html,body{
+  overflow-x: hidden;
+}
 
 body {
   /* width: min(1300px, 100%);
   margin: 0 auto; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   font-family: Poppins;
   background-color: var(--background);
   color: var(--text-main);
@@ -467,7 +470,7 @@ nav.nav-menu.open {
   }
 
   header {
-    padding: 0px 100px;
+    padding: 0px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
