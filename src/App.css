@@ -391,8 +391,8 @@ section {
       left: 50%;
       transform: translateX(-50%);
       width: 60%;
-      height: 4px;
-      filter: blur(2px);
+      height: 20px;
+      filter: blur(10px);
       background-image: linear-gradient(to right, var(--lime), var(--lime-hover));
       border-radius: 2px;
       opacity: 0.8;
