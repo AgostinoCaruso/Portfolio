@@ -404,6 +404,14 @@ section {
 }
 
 @media screen and (max-width:767px) {
+header {
+
+  & nav {
+    display: flex;
+    gap: 5px;
+    }
+  }
+}
   section {
     padding: 20px;
 
