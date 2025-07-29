@@ -467,7 +467,7 @@ nav.nav-menu.open {
   }
 
   header {
-    padding: 0px 30px;
+    padding: 0px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -515,6 +515,13 @@ nav.nav-menu.open {
 
       & .avatar {
         grid-row-start: 1;
+
+        & .card {
+          &:hover {
+            box-shadow: 0 100px 100px var(--lime-soft);
+            transform: scale(1);
+          }
+        }
       }
     }
 
