@@ -1,35 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
+import { GlobalContext } from '../context/GlobalContext'
 
 const Projects = () => {
 
-  const [listProjects] = useState([
-    {
-      name: "GameSpot",
-      des: "A full-stack web application for managing a digital game library. The frontend allows users to browse, search, and view game details, while the backend handles game data, and database integration.",
-      mission: "Full stack developer",
-      language: "HTML, CSS, JS, Java, Spring, MySql",
-      images: "/project1.png"
-    },
-    {
-      name: "B&B",
-      des: "lorem20",
-      mission: "Full stack developer",
-      language: "HTML, CSS, JS, MySql",
-      images: "../project1.png"
-    },
-  ])
+  const { language, translation } = useContext(GlobalContext);
+  const projects = translation[language].projects;
   return (
     <section id="projects">
       <div data-aos="fade-in">
         <div className="title">
-          These are my projects
+          {projects.title}
         </div>
         <div className="des">
-          lorem20
+          {projects.des}
         </div>
       </div>
       <div className="list">
-        {listProjects.map((value, key) => (
+        {projects.projectsList.map((value, key) => (
           <div key={key} className='item' data-aos={key % 2 === 0 ? "fade-right" : "fade-left"}>
             <div className="images">
               <img src={value?.images} alt="" />
@@ -42,7 +29,7 @@ const Projects = () => {
                 <div className='de'>{value.mission}</div>
               </div>
               <div className="mission">
-                <h4>Languages</h4>
+                <h4>{language === "en" ? "Languages" : "Linguaggi"}</h4>
                 <div className='de'>{value.language}</div>
               </div>
             </div>

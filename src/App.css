@@ -51,7 +51,7 @@ body {
 main {
   width: min(1300px, 100%);
   margin: 0 auto;
-  padding: 0 150px;
+  /* padding: 0 150px; */
   /*O metto bootstrap o devo tenere questo padding*/
 }
 
@@ -273,6 +273,8 @@ section {
           text-align: left;
           width: 100%;
           font-size: small;
+          /* font-weight: 500; */
+          /* font-style: italic */
         }
       }
     }
@@ -377,7 +379,7 @@ section {
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
-      width: 100%;
+      width: 60%;
       height: 4px;
       filter: blur(2px);
       background-image: linear-gradient(to right, var(--lime), var(--lime-hover));
