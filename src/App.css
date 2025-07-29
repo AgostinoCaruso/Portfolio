@@ -79,12 +79,14 @@ header {
   & img {
     width: 50px;
   }
+  .logo{
+    color:red;
+  }
 
   & .logo,
   nav {
     display: flex;
     gap: 30px;
-    color: #eee;
 
     & span {
       cursor: pointer;

@@ -48,7 +48,7 @@ const NavBar = () => {
         <select value={language} onChange={handleChange}
           style={{
             border: "none", outline: "none",
-            background: "transparent", backgroundColor: "#010824"
+            background: "transparent", backgroundColor: "#010824", color: "white"
           }}>
           <option value="en">English</option>
           <option value="it">Italiano</option>
