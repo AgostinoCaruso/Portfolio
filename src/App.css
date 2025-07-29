@@ -26,6 +26,7 @@
 body {
   /* width: min(1300px, 100%);
   margin: 0 auto; */
+  overflow-x: hidden;
   font-family: Poppins;
   background-color: var(--background);
   color: var(--text-main);
@@ -165,19 +166,19 @@ section {
         width: min(100%, 400px);
         box-shadow: 0 100px 100px var(--lime-soft);
         transition: 0.5s;
-        
+
         &:hover {
           box-shadow: 0 100px 100px var(--lime-hover);
           transform: scale(1.03);
         }
-        
+
         & img {
           width: 100%;
           height: min(400px, 50vh);
           object-fit: cover;
           object-position: top;
         }
-        
+
         & .info {
           background-color: #eee;
           color: #010824;
@@ -309,13 +310,18 @@ section {
         & .images {
           background-image: linear-gradient(-45deg, var(--lime), var(--lime-hover), var(--lime-soft));
           padding: 40px;
-          text-align: 20px;
+          text-align: center;
           border-radius: 20px;
           overflow: hidden;
+          height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           & img {
-            height: 400px;
-            /* width: 500px; */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             border-radius: 10px;
             box-shadow: 0 20px 40px #010824;
           }
@@ -395,4 +401,74 @@ section {
     background-position: 200% center;
   }
 
+}
+
+@media screen and (max-width:767px) {
+  section {
+    padding: 20px;
+
+    &#home {
+      grid-template-columns: 1fr;
+      padding-top: 70px;
+
+      & .content {
+        & .name {
+          font-size: 1.8em;
+        }
+
+        & a {
+          margin: auto;
+          font-size: small;
+        }
+      }
+
+      & .avatar {
+        grid-row-start: 1;
+      }
+    }
+
+    &#skills {
+      & .title {
+        font-size: 2em;
+      }
+
+      & .list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &#projects {
+      & .title {
+        font-size: 2em;
+      }
+
+      & .list {
+        & .item {
+          grid-template-columns: 1fr;
+
+          & .content {
+            & h3 {
+              font-size: 1.5em;
+            }
+          }
+
+          &:nth-child(2n) {
+
+            & .content,
+            .images {
+              grid-column-start: auto;
+              grid-column-end: auto;
+              grid-row-start: auto;
+            }
+          }
+        }
+      }
+    }
+
+    &#contacts {
+      & .title {
+        font-size: 2em;
+      }
+    }
+  }
 }
