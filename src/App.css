@@ -396,6 +396,63 @@ section {
 
 }
 
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 200;
+}
+
+.hamburger .bar {
+  height: 3px;
+  background-color: var(--text-main);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
+/* Animazione a X */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+nav.nav-menu {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: var(--background);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 150;
+  display: flex;
+  /* display sempre flex per animare opacity e transform */
+}
+
+nav.nav-menu.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 @keyframes gradientAnimation {
   to {
     background-position: 200% center;
@@ -404,14 +461,30 @@ section {
 }
 
 @media screen and (max-width:767px) {
-header {
 
-  & nav {
-    display: flex;
-    gap: 5px;
-    }
+
+  nav {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: var(--background);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    display: none;
+    z-index: 150;
   }
-}
+
+  nav.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
   section {
     padding: 20px;
 
