@@ -462,17 +462,20 @@ nav.nav-menu.open {
 
 @media screen and (max-width:767px) {
 
+  header{
+    padding: 0px 30px;
+  }
 
   nav {
     position: absolute;
     top: 60px;
-    left: 0;
+    left: 0px;
     width: 100%;
     background: var(--background);
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
-    padding: 20px;
+    padding: 50px;
     display: none;
     z-index: 150;
   }
