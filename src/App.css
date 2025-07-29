@@ -22,7 +22,9 @@
   --name-text-1: rgba(90, 255, 133, 0.8);
   --name-text-2: rgba(0, 255, 255, 0.5);
 }
-html,body{
+
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -400,7 +402,7 @@ section {
 }
 
 .hamburger {
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
   width: 30px;
@@ -408,6 +410,7 @@ section {
   cursor: pointer;
   z-index: 200;
 }
+
 
 .hamburger .bar {
   height: 3px;
@@ -463,6 +466,22 @@ nav.nav-menu.open {
 
 }
 
+@media screen and (min-width: 768px) {
+  nav.nav-menu {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 30px;
+    padding: 0;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    background: transparent;
+  }
+}
+
 @media screen and (max-width:767px) {
 
   body {
@@ -495,8 +514,9 @@ nav.nav-menu.open {
   }
 
   .hamburger {
-    display: flex;
+    display: flex !important;
   }
+
 
   section {
     padding: 20px;

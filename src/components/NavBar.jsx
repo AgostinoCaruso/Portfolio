@@ -58,7 +58,6 @@ const NavBar = () => {
       <div
         className={`hamburger ${isMenuOpen ? 'open' : ''}`}
         onClick={() => setIsMenuOpen(prev => !prev)}
-        style={{ cursor: 'pointer', zIndex: 200 }}
       >
         <div className="bar"></div>
         <div className="bar"></div>
