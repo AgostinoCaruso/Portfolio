@@ -10,13 +10,16 @@ import 'aos/dist/aos.css';
 
 function App() {
 
-useEffect(() => {
   AOS.init({
-    once: true,
-    offset: 80,
-    disable: window.innerWidth < 768 // disabilita su mobile
+    duration: 800,
+    easing: 'ease-in-out',
+    once: false,
+    offset: 200,
+    // disable: function () {
+    //   return window.innerWidth < 768;
+    // }
   });
-}, []);
+
 
   return (
     <main className='container'>

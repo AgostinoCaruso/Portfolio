@@ -32,9 +32,9 @@ const Skills = () => {
         {
           skills.skillsList.map((value, index) => {
             let aosType = '';
-            if (index % 3 === 0) aosType = 'fade-right';
+            if (index % 3 === 0) aosType = 'fade-up';
             else if (index % 3 === 1) aosType = 'zoom-in';
-            else aosType = 'fade-left';
+            else aosType = 'fade-down';
 
             return (
               <div key={index} className='item' data-aos={aosType}>

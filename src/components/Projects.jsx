@@ -17,7 +17,7 @@ const Projects = () => {
       </div>
       <div className="list">
         {projects.projectsList.map((value, key) => (
-          <div key={key} className='item' data-aos={key % 2 === 0 ? "fade-right" : "fade-left"}>
+          <div key={key} className='item' data-aos={key % 2 === 0 ? "fade-up" : "fade-down"}>
             <div className="images">
               <img src={value?.images} alt="" />
             </div>
