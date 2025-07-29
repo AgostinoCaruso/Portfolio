@@ -17,7 +17,7 @@ const Home = () => {
           <div className="des">
             {translation[language].home.des}
           </div>
-          <a href="/Agostino.Caruso.pdf" target='_blank'>Download my CV</a>
+          <a href="/Agostino.Caruso.pdf" target='_blank'>{translation[language].home.cv}</a>
         </div>
         <div className="avatar">
           <div className="card">
@@ -25,7 +25,7 @@ const Home = () => {
             <div className="info">
               <div>
                 <div>JR full stack web dev</div>
-                <div>Italian</div>
+                <div>{translation[language].home.nationality}</div>
                 <div className='link'>
 
                   <a href="https://github.com/agostinocaruso" target='_blank'><FontAwesomeIcon icon={faGithub} />GitHUB</a>

@@ -11,16 +11,22 @@ const NavBar = () => {
   }
 
   const [activeTab, setActiveTab] = useState('home');
-  const listNav = ['home', 'skills', 'projects', 'contacts'];
-
+  const listNavEffect = ["home", "skills", "projects", "contacts"];
+  const listNav = [
+    { id: 'home', label: translation[language].navbar.home || 'home' },
+    { id: 'skills', label: translation[language].navbar.skills || 'skills' },
+    { id: 'projects', label: translation[language].navbar.projects },
+    { id: 'contacts', label: translation[language].navbar.contacts }
+  ];
   const handleClick = (section) => {
     document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+
     setActiveTab(section);
   };
 
   useEffect(() => {
     const handleScroll = () => {
-      const offsets = listNav.map(id => {
+      const offsets = listNavEffect.map(id => {
         const el = document.getElementById(id);
         return {
           id,
@@ -42,23 +48,26 @@ const NavBar = () => {
   return (
     <header>
       <div className="logo">
-        <select value={language} onChange={handleChange} 
-        style={{border:"none",outline: "none",
-  background: "transparent", backgroundColor:"#010824"}}>
+        <select value={language} onChange={handleChange}
+          style={{
+            border: "none", outline: "none",
+            background: "transparent", backgroundColor: "#010824"
+          }}>
           <option value="en">English</option>
           <option value="it">Italiano</option>
         </select>
       </div>
       <nav>
-        {listNav.map((item) => (
+        {listNav.map(({ id, label }) => (
           <span
-            key={item}
-            onClick={() => handleClick(item)}
-            className={activeTab === item ? 'active' : ''}
+            key={id}
+            onClick={() => handleClick(id)}
+            className={activeTab === id ? 'active' : ''}
           >
-            {item}
+            {label}
           </span>
         ))}
+
       </nav>
     </header>
   );

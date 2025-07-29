@@ -51,7 +51,8 @@ body {
 main {
   width: min(1300px, 100%);
   margin: 0 auto;
-  padding: 0 150px;/*O metto bootstrap o devo tenere questo padding*/
+  padding: 0 150px;
+  /*O metto bootstrap o devo tenere questo padding*/
 }
 
 header {
@@ -161,23 +162,22 @@ section {
       & .card {
         display: inline-flex;
         flex-direction: column;
-
         width: min(100%, 400px);
         box-shadow: 0 100px 100px var(--lime-soft);
         transition: 0.5s;
-
+        
         &:hover {
           box-shadow: 0 100px 100px var(--lime-hover);
-          transform: scale(1.01);
+          transform: scale(1.03);
         }
-
+        
         & img {
           width: 100%;
-          height: min(700px, 50vh);
+          height: min(400px, 50vh);
           object-fit: cover;
           object-position: top;
         }
-
+        
         & .info {
           background-color: #eee;
           color: #010824;
@@ -245,6 +245,7 @@ section {
         /* z-index: -1; */
         border-radius: 20px;
         background-size: 200% auto;
+        filter: blur(100px);
       }
 
       & .item {
@@ -276,6 +277,115 @@ section {
       }
     }
   }
+
+  &#projects {
+    & .title {
+      font-size: 3em;
+      text-align: center;
+      font-family: 'MuseoModerno';
+      margin-top: 100px;
+    }
+
+    & .des {
+      color: var(--text-main);
+      text-align: center;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    & .list {
+      display: grid;
+      margin: 20px 20px;
+      gap: 60px;
+
+      & .item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        align-items: center;
+
+        & .images {
+          background-image: linear-gradient(-45deg, var(--lime), var(--lime-hover), var(--lime-soft));
+          padding: 40px;
+          text-align: 20px;
+          border-radius: 20px;
+          overflow: hidden;
+
+          & img {
+            height: 400px;
+            /* width: 500px; */
+            border-radius: 10px;
+            box-shadow: 0 20px 40px #010824;
+          }
+        }
+
+        & .content {
+          & h3 {
+            font-size: 3em;
+            margin: 0;
+
+          }
+
+          & .des {
+            text-align: left;
+            width: 100%;
+          }
+
+          & .mission {
+            display: grid;
+            grid-template-columns: 70px, 1fr;
+            align-items: center;
+            gap: 10px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+
+    & .item:nth-child(even) {
+      direction: rtl;
+    }
+
+    & .item:nth-child(even) .images,
+    & .item:nth-child(even) .content {
+      direction: ltr;
+    }
+  }
+
+  &#contacts {
+    padding-bottom: 200px;
+    position: relative;
+
+    & .title {
+      font-size: 3em;
+      text-align: center;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    & .list {
+      text-align: center;
+
+      & .item {
+        margin-top: 50px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 4px;
+      filter: blur(2px);
+      background-image: linear-gradient(to right, var(--lime), var(--lime-hover));
+      border-radius: 2px;
+      opacity: 0.8;
+    }
+  }
+
 }
 
 @keyframes gradientAnimation {
