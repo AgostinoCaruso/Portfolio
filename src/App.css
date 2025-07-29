@@ -462,8 +462,15 @@ nav.nav-menu.open {
 
 @media screen and (max-width:767px) {
 
-  header{
+  body {
+    overflow-x: hidden;
+  }
+
+  header {
     padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   nav {
