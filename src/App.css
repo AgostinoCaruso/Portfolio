@@ -206,11 +206,11 @@ section {
             flex-direction: column;
 
             & a {
-              text-decoration: none;
+              text-decoration: underline;
               color: var(--background);
 
               &:hover {
-                text-decoration: underline;
+                /* text-decoration-color: red; */
               }
             }
           }
