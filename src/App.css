@@ -83,7 +83,7 @@ main {
   /*O metto bootstrap o devo tenere questo padding*/
 }
 
-.dark-theme-a span{
+/* .dark-theme-a span{
   color: red !important ;
   text-decoration: underline;
 }
@@ -98,7 +98,7 @@ main {
 
 .light-theme-icon button {
   color: yellow;
-}
+} */
 
 header {
   position: fixed;
@@ -113,8 +113,10 @@ header {
   padding: 0 20px;
   box-sizing: border-box;
   z-index: 100;
-  backdrop-filter: blur(10px);
 
+  background-color: rgba(0, 0, 0, 0.6); /* Nero trasparente */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
   & img {
     width: 50px;
   }
