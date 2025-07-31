@@ -499,7 +499,7 @@ nav.nav-menu {
   top: 60px;
   left: 0;
   width: 100%;
-  background: var(--background);
+  background: var(--backgroundBlack);
   flex-direction: column;
   align-items: flex-start;
   gap: 20px;
@@ -560,7 +560,7 @@ nav.nav-menu.open {
     top: 60px;
     left: 0px;
     width: 100%;
-    background: var(--background);
+    background: var(--backgroundBlack);
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
