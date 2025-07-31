@@ -9,6 +9,7 @@
   /* per glow o sfondi */
   --lime-hover: rgba(174, 255, 47, 0.8);
   /* per hover o pulsanti */
+  --backgroundBlack: #000000;
   --background: #010824;
   /* sfondo blu notte */
   --foreground: #0d1117;
@@ -33,7 +34,7 @@ body {
   margin: 0 auto; */
   /* overflow-x: hidden; */
   font-family: Poppins;
-  background-color: var(--background);
+  background-color: var(--backgroundBlack);
   color: var(--text-main);
   font-size: 15px;
   min-height: 100vh;
@@ -43,7 +44,7 @@ body {
     width: 400px;
     height: 400px;
     content: '';
-    background-image: linear-gradient(to right, #eee, var(--lime), blue, red);
+    /* background-image: linear-gradient(to right, #eee, var(--lime), blue, red); */
     /* z-index: -1; */
     top: -200px;
     left: calc(50% - 200px);
