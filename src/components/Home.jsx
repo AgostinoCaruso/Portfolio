@@ -17,7 +17,7 @@ const Home = () => {
           <div className="des">
             {translation[language].home.des}
           </div>
-          <a href="/Agostino.Caruso.pdf" target='_blank'>{translation[language].home.cv}</a>
+          <a className='cv' href="/Agostino.Caruso.pdf" target='_blank'>{translation[language].home.cv}</a>
         </div>
         <div className="avatar">
           <div className="card">

@@ -9,6 +9,7 @@
   /* per glow o sfondi */
   --lime-hover: rgba(174, 255, 47, 0.8);
   /* per hover o pulsanti */
+  --backgroundWhite: #eee;
   --backgroundBlack: #000000;
   --background: #010824;
   /* sfondo blu notte */
@@ -28,6 +29,25 @@ html,
 body {
   overflow-x: hidden;
 }
+
+body.dark {
+  background-color: var(--backgroundBlack);
+  color: #ffffff;
+}
+
+body.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.cv.dark {
+  color: #ffffff !important;
+}
+.cv.light{
+  color: #000000 !important;
+  
+}
+
 
 body {
   /* width: min(1300px, 100%);
@@ -58,8 +78,26 @@ body {
 main {
   width: min(1300px, 100%);
   margin: 0 auto;
+
   /* padding: 0 150px; */
   /*O metto bootstrap o devo tenere questo padding*/
+}
+
+.dark-theme-a span{
+  color: red !important ;
+  text-decoration: underline;
+}
+.light-theme-a span{
+  color: black ;
+  text-decoration: underline;
+}
+
+.dark-theme-icon button {
+  color: white;
+}
+
+.light-theme-icon button {
+  color: yellow;
 }
 
 header {
@@ -80,14 +118,28 @@ header {
   & img {
     width: 50px;
   }
-  .logo{
-    color:red;
+
+
+  .logo {
+    & .theme button {
+      border: none;
+      outline: none;
+    }
   }
 
   & .logo,
   nav {
     display: flex;
     gap: 30px;
+
+    & .languageSelect {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      background: transparent;
+      background-color: var(--backgroundBlack);
+      color: white;
+    }
 
     & span {
       cursor: pointer;
@@ -103,8 +155,10 @@ header {
         color: var(--lime-hover);
       }
     }
+
   }
 }
+
 
 section {
   padding: 50px;
@@ -228,7 +282,7 @@ section {
     }
 
     & .des {
-      color: var(--text-main);
+      /* color: var(--text-main); */
       text-align: center;
       max-width: 500px;
       margin: auto;
@@ -264,6 +318,7 @@ section {
         background-color: #01082488;
 
         & svg {
+          color: white;
           font-size: 30px;
           background-color: #eee2;
           padding: 10px;

@@ -1,8 +1,14 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faMoon,
+  faSun
+} from '@fortawesome/free-solid-svg-icons';
+
 const NavBar = () => {
-  const { language, changeLanguage, translation } = useContext(GlobalContext);
+  const { language, changeLanguage, translation, changeTheme, themeDark } = useContext(GlobalContext);
   const handleChange = (e) => changeLanguage(e.target.value);
 
   const [activeTab, setActiveTab] = useState('home');
@@ -44,14 +50,15 @@ const NavBar = () => {
   return (
     <header>
       <div className="logo">
-        <select value={language} onChange={handleChange}
-          style={{
-            border: "none", outline: "none",
-            background: "transparent", backgroundColor: "#010824", color: "white"
-          }}>
+        <select className={`languageSelect ${themeDark ? 'light-theme-a':'dark-theme-a'}`} value={language} onChange={handleChange}>
           <option value="en">English</option>
           <option value="it">Italiano</option>
         </select>
+        {/* <div className={`theme ${themeDark ? 'light-theme-icon' : 'dark-theme-icon'}`}>
+          <button onClick={changeTheme}>{themeDark ? 
+            <FontAwesomeIcon icon={faSun} />
+            : <FontAwesomeIcon icon={faMoon}/>}</button>
+        </div> */}
       </div>
 
       <div
