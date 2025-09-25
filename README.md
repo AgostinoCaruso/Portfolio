@@ -1,12 +1,17 @@
-# React + Vite
+# Portfolio di [Agostino] 💻
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Benvenuto nel mio portfolio! Qui puoi trovare una panoramica delle mie competenze, tecnologie conosciute e progetti realizzati.
 
-Currently, two official plugins are available:
+## 👨‍💻 Chi sono
+Sono uno sviluppatore appassionato di **sviluppo web full-stack**, con esperienza nello sviluppo di progetti personali e formativi. Amo risolvere problemi complessi e creare applicazioni funzionali e curate nei dettagli.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Tecnologie e strumenti
+- **Frontend:** JavaScript, React, Bootstrap  
+- **Backend:** Java, Spring Boot  
+- **Database:** MySQL  
+- **Altri strumenti:** Git, GitHub, Vite
 
-## Expanding the ESLint configuration
+## 📬 Contatti
+- [LinkedIn](https://www.linkedin.com/in/agostino-caruso-154811377/)  
+- [GitHub](https://github.com/AgostinoCaruso)  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
