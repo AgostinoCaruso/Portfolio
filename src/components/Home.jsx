@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalContext } from '../context/GlobalContext'
-import img_profilo from '../assets/img_portfolio.jpeg'
+import img_profilo from '../assets/img_portfolio.jpg'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
